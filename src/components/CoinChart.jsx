@@ -1,3 +1,4 @@
+import Spinner from "./Spinner";
 import { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import { 
@@ -53,7 +54,38 @@ const CoinChart = ({coinId}) => {
         fetchPrices()
     },[coinId])
 
-    return ( <>Chart</> );
+    if (loading) return <p>Loading chart...</p>
+    return ( 
+        !loading && (<div style={{marginTop: '30px'}}>
+        <Line
+            data= {chartData}
+            options={{
+                responsive:true,
+                plugins:{
+                    legend:{display:false},
+                    tooltip:{mode:'index', intersect:false}
+                },
+                scales:{
+                    x:{
+                        type:'time',
+                        time:{
+                            unit:'day'
+                        },
+                        ticks:{
+                            autoSkip: true,
+                            maxTicksLimit:7
+                        }
+                    },
+                    y:{
+                        ticks:{
+                            callback:(value)=> `₹${value.toLocaleString()}`
+                        }
+                    }
+                }
+            }}
+        />
+    </div> )
+    );
 }
  
 export default CoinChart;
