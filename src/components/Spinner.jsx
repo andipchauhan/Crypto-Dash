@@ -6,7 +6,7 @@ const override = {
 }
 
 
-const Spinner = ({color = 'lightblue', size='150'}) => {
+const Spinner = ({color = 'lightblue', size='150px'}) => {
     return ( <div>
         <HashLoader
             color={color}
