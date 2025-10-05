@@ -2,8 +2,9 @@ const AboutPage = () => {
     return ( 
         <div className="about">
             <h1>About Crypto Dash</h1>
-            <p>This is a React project that shows live crypto prices.</p>
-            <p>🚀 Expect more features such as change currency in future.</p>
+            <p>Crypto Dash is a modern, responsive cryptocurrency dashboard built with ReactJS.</p>
+            <p>It displays live cryptocurrency prices by integrating real-time market data from the CoinGecko API.</p>
+            <p>🚀 Expect more features in future updates, such as the ability to change currency, view historical data, and interactive charts.</p>
         </div>
      );
 }   
