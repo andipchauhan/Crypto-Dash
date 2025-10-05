@@ -46,13 +46,13 @@ const HomePage = ({
       {loading && <Spinner color="white"/>}
       {error && <div className="error">{error}</div>}
 
-      <div className="top-controls">
+      {!loading && !error && (
+        <>
+        <div className="top-controls">
         <FilterInput filter={filter} onFilterChange={setFilter} />
         <LimitSelector limit={limit} onLimitChange={setLimit} />
         <SortSelector sortBy={sortBy} onSortChange={setSortBy} />
       </div>
-
-      {!loading && !error && (
         <main className="grid">
           {filteredCoins.length > 0 ? (
             filteredCoins.map((coin) => <CoinCard coin={coin} key={coin.id} />)
@@ -60,6 +60,7 @@ const HomePage = ({
             <p>No matching coins.</p>
           )}
         </main>
+        </>
       )}
     </div>
   );
