@@ -37,7 +37,7 @@ const App = () => {
     <>
     <Header/>
     <Routes>
-      <Route path="/Crypto-Dash" 
+      <Route path="/" 
       element={ <HomePage 
         coins={coins}
         filter={filter}
