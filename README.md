@@ -1,5 +1,5 @@
 # 🚀 Crypto Dash
-**Visit at:** https://andipchauhan.github.io/Crypto-Dash/
+**Visit at:** https://crypto-dash-dev.vercel.app/
 
 **Crypto Dash** is a sleek, responsive cryptocurrency dashboard built with **ReactJS**. It fetches real-time market data using the reliable **CoinGecko API**, offering users an at-a-glance view of the latest trends and prices in the crypto world.
 
